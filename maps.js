@@ -12,7 +12,7 @@
 // 10 : secret passage tile (wall that can be unlocked)
 // 11 : unlock button 
 
-const main_map = [
+const demo_map = [
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],

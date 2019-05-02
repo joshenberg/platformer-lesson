@@ -2,7 +2,7 @@ const properties = {
     // what map you wanna play!
     // options include (but aren't limited to):
 
-    // main_map : a standard, pre-built challenge
+    // demo_map : a standard, pre-built challenge
     // challenge_map : might require some editing to succeed
     // jump_map : a jumping challenge
     // mini_map : shows off all the tiles you can use to create your own!
@@ -10,7 +10,7 @@ const properties = {
     // if you wanna make your own map, follow the pattern in maps.js 
     // and name it whatever you want!
 
-    map: name_map,
+    map: demo_map,
 
     // gravity of the level. 0 = no gravity, 1 = very high gravity
     gravity: 0.3,
@@ -34,7 +34,6 @@ const properties = {
     // how bouncy the usual floor is! standard is 1
     bounciness: 1
 
-    // bounciness!
     // pre-set colors
 
 }
