@@ -36,17 +36,18 @@ var map = {
     
     */
     
+
     keys: [
         {id: 0, colour: '#333', solid: 0}, // dark gray unusable space, outside of map
         {id: 1, colour: '#888', solid: 0}, // light gray normal background
-        {id: 2,colour: '#555',solid: 1,bounce: 0.35}, // med gray solid wall/floor
+        {id: 2,colour: '#555',solid: 1,bounce: 0.35 * properties.bounciness}, // med gray solid wall/floor
         {id: 3,colour: 'rgba(121, 220, 242, 0.4)',friction: {x: 0.9,y: 0.9},gravity: {x: 0,y: 0.1},jump: 1,fore: 1}, // water
         {id: 4,colour: '#777',jump: 1}, // climbable background (can double/triple/quadruple/x-tuple jump)
-        {id: 5,colour: '#E373FA',solid: 1,bounce: 1.1}, // pink bouncy tile
+        {id: 5,colour: '#E373FA',solid: 1,bounce: 1.1 * properties.bounciness}, // pink bouncy tile
         {id: 6,colour: '#666',solid: 1,bounce: 0}, // darker gray no-bounce wall/floor
         {id: 7,colour: '#73C6FA',solid: 0,script: 'change_colour'}, // light blue, change's player color 
         {id: 8,colour: '#FADF73',solid: 0,script: 'next_level'}, // yellow goal tile
-        {id: 9,colour: '#C93232',solid: 0,script: 'death'}, // red lava/death tile
+        {id: 9,colour: '#C93232',solid: 0,script: death_script}, // red lava/death tile
         {id: 10,colour: '#555',solid: 1}, // secret passage tile (wall that can be unlocked)
         {id: 11,colour: '#0FF',solid: 0,script: 'unlock'} // unlock button 
     ],

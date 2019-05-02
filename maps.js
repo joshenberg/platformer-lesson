@@ -74,7 +74,7 @@ const main_map = [
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-]
+];
 
 // good place to see what all the tiles do!
 const mini_map = [
@@ -97,7 +97,7 @@ const mini_map = [
     [0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 1, 0, 1, 0, 1, 0, 0, 0],
     [0, 0, 1, 0, 1, 0, 1, 0, 0, 0],
-]
+];
 
 // hint: use momentum! always start from a bounce! 
 const jump_map = [
@@ -150,5 +150,86 @@ const jump_map = [
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
     [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-]
+];
 
+// lower-case only please!
+const your_name = "charlotte";
+// in order for name_map to work, you HAVE TO set 
+// starting coordinates to X: 1, Y: 8
+
+const gap = [
+    [2],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [0],
+    [5]
+];
+
+let name_map = [
+    [2],
+    [2],
+    [2],
+    [2],
+    [2],
+    [2],
+    [2],
+    [2],
+    [2],
+    [2]
+];
+
+for (let i = 0; i < name_map.length; i++) {
+    name_map[i] = _.concat(name_map[i], 
+        gap[i]);
+};
+
+const your_name_array = your_name.split("");
+your_name_array.forEach(x => {
+    for (let i = 0; i < name_map.length; i++) {
+        console.log(x, ' yep ', letter_map[x].shape[i]);
+
+        for (let j = 0; j < letter_map[x].size; j++) {
+            if (i == 0) {
+                name_map[i] = _.concat(name_map[i], [2]);
+            }
+            else if (i == 1 || i == 8) {
+                name_map[i] = _.concat(name_map[i], [0]);
+
+            }
+            else if (i == 9) {
+                name_map[i] = _.concat(name_map[i], [5]);
+
+            }
+        }
+        
+        if ( i >= 2 && i < 8) {
+            name_map[i] = _.concat(name_map[i], 
+                letter_map[x].shape[i-2]);
+        }
+        
+        
+    }
+    for (let i = 0; i < name_map.length; i++) {
+        name_map[i] = _.concat(name_map[i], 
+            gap[i]);
+    }
+});
+for (let i = 0; i < name_map.length; i++) {
+    name_map[i] = _.concat(name_map[i], 
+        [2]);
+}
+
+for (let i = 0; i < name_map[0].length; i++) {
+    for (let j = 1; j < 8; j++) {
+        if (name_map[j][i] == 0) {
+            name_map[j][i] = 10;
+        }
+    }    
+}
+
+name_map[8][name_map[0].length - 2] = 11;
