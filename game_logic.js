@@ -115,6 +115,7 @@ Clarity.prototype.keyup = function (e) {
 };
 
 Clarity.prototype.load_map = function (map) {
+    console.log('AAA loading map: ', map.data);
 
     if (typeof map      === 'undefined'
      || typeof map.data === 'undefined'
@@ -124,6 +125,11 @@ Clarity.prototype.load_map = function (map) {
 
         return false;
     }
+    
+    var _this = this;
+    _this.key.up = false;
+    _this.key.left = false;
+    _this.key.right = false;
 
     this.current_map = map;
 
