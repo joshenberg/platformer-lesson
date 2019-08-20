@@ -118,7 +118,7 @@ var map = {
     scripts: {
         change_colour: 'this.player.colour = "#"+(Math.random()*0xFFFFFF<<0).toString(16);',
         /* you could load a new map variable here */
-        change_map: 'alert("You win! Now onto the next level"); map = {...map, data: map.get_next_map(map.cur_index).map_array, cur_index: map.cur_index+1}; this.load_map(map);',
+        change_map: 'alert("You win! Now onto the next level"); map = {...map, data: map.get_next_map(map.cur_index).map_array, cur_index: map.cur_index+1}; this.load_map(map); change_vals();',
         next_level: 'alert("Yay! You won! Reloading map.");this.load_map(map);',
         death: 'alert("You died!");this.load_map(map);',
         unlock: 'this.current_map.keys[10].solid = 0;this.current_map.keys[10].colour = "#888";'
@@ -126,8 +126,6 @@ var map = {
 };
 
 var next_map_index = 0;
-
-console.log('original next_map.data', map.data);
 
 /* Setup of the engine */
 
