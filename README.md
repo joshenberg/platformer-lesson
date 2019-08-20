@@ -44,7 +44,7 @@ Arrays
 Slightly different than lists, arrays have a specific order. Your position in the array (your index) can have an impact on when / how that piece of data will be used.
 Arrays can also contain arrays! This creates a 2D array. In this game, maps work by creating a grid of Integers represented by a 2D array, and you can select a point on the grid using coordinates. 
 
-ex. [0, 2, 4, 6, 7, 43, 201023, 1997], ['lemon', 'orange', 'banana'], [ ['lemon','lime','orange'], ['broccoli', 'spinach'] ]
+ex. [0, 2, 4, 6, 7, 43, 201023, 1997],   ['lemon', 'orange', 'banana'],    [ ['lemon','lime','orange'], ['broccoli', 'spinach'] ]
 
 Objects
 This is a tough one. Anything can be an Object, it just needs to have properties. A dish on a menu is an Object. Every dish will have the properties ingredients and cost. The menu then becomes a List of Objects. Every map in the challenge_maps_map is an Object with the properties name, map_array, and hint. Objects are the bread-and-butter of programming because they can represent almost any concept!
