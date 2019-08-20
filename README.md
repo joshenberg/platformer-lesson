@@ -18,11 +18,15 @@ Everywhere around you are data structures!! It's kind of amazing once you see it
 
 Numbers :)
 ----------
-Integers - 0, 1, 2, -5, 80, etc, all the way up to 2147483647 (the largest integer a computer can handle using binary). They're just numbers! Whole numbers, specifically.
+Integers
+
+0, 1, 2, -5, 80, etc, all the way up to 2147483647 (the largest integer a computer can handle using binary). They're just numbers! Whole numbers, specifically.
 
 ex. your age, your house number, the number of toes you have on your left foot
 
-Double - 0.25, 1.0, -5.3333, etc. Doubles are a way of representing numbers with decimals / fractional components. 
+Doubles
+
+0.25, 1.0, -5.3333, etc. Doubles are a way of representing numbers with decimals / fractional components. 
 
 ex. the cost of a candy bar
 
