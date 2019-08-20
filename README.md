@@ -1,11 +1,3 @@
-______ _       _    __                               
-| ___ \ |     | |  / _|                              
-| |_/ / | __ _| |_| |_ ___  _ __ _ __ ___   ___ _ __ 
-|  __/| |/ _` | __|  _/ _ \| '__| '_ ` _ \ / _ \ '__|
-| |   | | (_| | |_| || (_) | |  | | | | | |  __/ |   
-\_|   |_|\__,_|\__|_| \___/|_|  |_| |_| |_|\___|_|   
-                                                    
-                                                     
 Platformer Game
 
 Source code based on Clarity, an open source platformer for Javascript written by @dissimulate
@@ -27,9 +19,11 @@ Everywhere around you are data structures!! It's kind of amazing once you see it
 Numbers :)
 ----------
 Integers - 0, 1, 2, -5, 80, etc, all the way up to 2147483647 (the largest integer a computer can handle using binary). They're just numbers! Whole numbers, specifically.
+
 ex. your age, your house number, the number of toes you have on your left foot
 
 Double - 0.25, 1.0, -5.3333, etc. Doubles are a way of representing numbers with decimals / fractional components. 
+
 ex. the cost of a candy bar
 
 
@@ -38,15 +32,19 @@ Collections
 
 Strings!
 A String is how you represent words! Actually, not just words, but any ordered collection of Characters (letters, numbers, punctuation, spaces). They MUST be in order. Obviously, my name "Josh" is not the same thing if you re-order the letters to be "hoJs". 
+
 ex. your name, "Market 32", "Dealer.com", any password you have ever used. Technically, all the text you're reading is a biiiig long String.
 
 Lists
 One of the more literal data structures. It's a list . . . of things. Now, these things all have to be alike. You can have a list of maps, for example, like in our platformer. You can't have a list where some things are maps and some things are dogs, though. But lists are everywhere! The roster of everyone in this class is a List of Strings. A menu at a restaurant is a List of dishes. 
+
 ex. class roster, any list you can conceive of really
 
 Arrays
 Slightly different than lists, arrays have a specific order. Your position in the array (your index) can have an impact on when / how that piece of data will be used.
 Arrays can also contain arrays! This creates a 2D array. In this game, maps work by creating a grid of Integers represented by a 2D array, and you can select a point on the grid using coordinates. 
+
+ex. [0, 2, 4, 6, 7, 43, 201023, 1997], ['lemon', 'orange', 'banana'], [ ['lemon','lime','orange'], ['broccoli', 'spinach'] ]
 
 Objects
 This is a tough one. Anything can be an Object, it just needs to have properties. A dish on a menu is an Object. Every dish will have the properties ingredients and cost. The menu then becomes a List of Objects. Every map in the challenge_maps_map is an Object with the properties name, map_array, and hint. Objects are the bread-and-butter of programming because they can represent almost any concept!
