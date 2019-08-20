@@ -15,7 +15,7 @@ If you want to make an edit, MAKE SURE TO HIT SAVE! Then either hit index.html a
 Reference Guide
 ----------------
 
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ A WORD ABOUT THE CODE USED FOR THIS GAME \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+A WORD ABOUT THE CODE USED FOR THE GAME
 
 Javascript is a web language that is read by your internet browser. The vast majority of websites are some version of it!
 
@@ -29,8 +29,8 @@ CSS (Cascading Style Sheets) tells the browser how each of the elements is suppo
 
 Everywhere around you are data structures!! It's kind of amazing once you see it. Computers require a formal way to talk about them, but they're basically things you already know and use in your daily life. I'll briefly touch on some of the big ones you'll see here.
 
-Numbers :)
-----------
+//////////////  Numbers :) //////////////
+
 Integers
 
 0, 1, 2, -5, 80, etc, all the way up to 2147483647 (the largest integer a computer can handle using binary). They're just numbers! Whole numbers, specifically.
@@ -44,8 +44,7 @@ Doubles
 ex. the cost of a candy bar
 
 
-Collections
-------------
+\\\\\\\\\\\\\\\ Collections \\\\\\\\
 
 Strings!
 
@@ -71,6 +70,7 @@ Objects
 This is a tough one. Anything can be an Object, it just needs to have properties. A dish on a menu is an Object. Every dish will have the properties ingredients and cost. The menu then becomes a List of Objects. Every map in the challenge_maps_map is an Object with the properties name, map_array, and hint. Objects are the bread-and-butter of programming because they can represent almost any concept!
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ DESCRIPTION OF FILES \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-----------------------------
 
 index.html
 ----------
