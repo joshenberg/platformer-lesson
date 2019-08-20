@@ -1,6 +1,12 @@
 Platformer Game
+---------------
 
 Source code based on Clarity, an open source platformer for Javascript written by @dissimulate
+
+How to run
+----------
+Open up the folder containing all the files for the game, and double click index.html!
+If you want to make an edit, MAKE SURE TO HIT SAVE! Then either hit index.html again or refresh the page and it will pick up your changes.
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ A WORD ABOUT THE CODE USED FOR THIS GAME \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
