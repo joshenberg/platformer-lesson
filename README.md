@@ -8,6 +8,13 @@ How to run
 Open up the folder containing all the files for the game, and double click index.html!
 If you want to make an edit, MAKE SURE TO HIT SAVE! Then either hit index.html again or refresh the page and it will pick up your changes.
 
+
+
+
+
+Reference Guide
+----------------
+
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ A WORD ABOUT THE CODE USED FOR THIS GAME \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 Javascript is a web language that is read by your internet browser. The vast majority of websites are some version of it!
