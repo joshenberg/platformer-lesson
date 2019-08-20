@@ -54,7 +54,7 @@ var map = {
     ],
 
     /* An array representing the map tiles. Each number corresponds to a key */
-    data: properties.map,
+    data: properties.map.map_array,
 
     /* Default gravity of the map */
     
@@ -74,8 +74,8 @@ var map = {
     
     movement_speed: {
         jump: properties.jump_speed,
-        left: properties.movement_speed,
-        right: properties.movement_speed
+        left: properties.horizontal_movement_speed,
+        right: properties.horizontal_movement_speed
     },
     
     /* The coordinates at which the player spawns and the colour of the player */
@@ -86,38 +86,60 @@ var map = {
         colour: properties.player_color
     },
 
+    get_next_map(index) {
+        let map;
+        switch (index){
+            case 0:
+                map = challenge_maps_map.cant_reach;
+                break;
+            case 1:
+                map = challenge_maps_map.jump_map;
+                break;
+            case 2:
+                map = challenge_maps_map.lava_map;
+                break;
+            case 3:
+                map = challenge_maps_map.flappy_bird;
+                break;
+            case 4: 
+                map = challenge_maps_map.the_maze;
+                break;
+            case 5: 
+                map = challenge_maps_map.the_block;
+        }
+        
+        return map || properties.map;
+    },
+
+    cur_index: 0,
+
     /* scripts refered to by the "script" variable in the tile keys */
 
     scripts: {
         change_colour: 'this.player.colour = "#"+(Math.random()*0xFFFFFF<<0).toString(16);',
         /* you could load a new map variable here */
-        change_map: 'alert("You win! Now onto the next level"); this.load_map(next_map); next_map_index++;',
+        change_map: 'alert("You win! Now onto the next level"); map = {...map, data: map.get_next_map(map.cur_index).map_array, cur_index: map.cur_index+1}; this.load_map(map);',
         next_level: 'alert("Yay! You won! Reloading map.");this.load_map(map);',
         death: 'alert("You died!");this.load_map(map);',
         unlock: 'this.current_map.keys[10].solid = 0;this.current_map.keys[10].colour = "#888";'
     }
 };
 
-var next_map = {...map};
 var next_map_index = 0;
 
-console.log('original next_map.data', next_map.data);
+console.log('original next_map.data', map.data);
 
 /* Setup of the engine */
 
 var game = new Clarity();
 game.set_viewport(canvas.width, canvas.height);
-game.load_map(map);
+game.load_map(map); // load the starting map
 
 /* Limit the viewport to the confines of the map */
 
 game.limit_viewport = true;
 
 var Loop = function() {
-
-    if (is_challenge_map(next_map.data)) {
-        next_map = {...next_map, data: get_next_map(next_map_index)};
-    }
 
     ctx.fillStyle = '#333';
     ctx.fillRect(0, 0, canvas.width, canvas.height);

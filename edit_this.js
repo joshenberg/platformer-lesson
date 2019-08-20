@@ -13,23 +13,23 @@ const properties = {
     // and name it whatever you want!
 
     // can you find the hidden map?
-    map: demo_map,
+    map: challenge_maps_map.demo_map,
 
     // x, y coordinates of where the player begins the level. 
     // (0, 0) is upper left for computers, just like where you'd start reading a page of text
 
-    // heads up! challenge maps require 2,2 as starting position! 
+    // $$$$$$$$$$     HEADS UP! challenge maps require 2,2 as starting position! 
     starting_location_x: 2,
     starting_location_y: 2,
 
     // gravity of the level. 0 = no gravity, 1 = very high gravity
     gravity: 0.3,
 
-    // how bouncy the usual floor is! standard is 1
+    // how bouncy the floor is! The standard is 1
     bounciness: 1,
     
-    // how fast character moves when pressing a button L, R, or Up
-    movement_speed: 0.3,
+    // how fast character moves when pressing a button (L, R, or Up)
+    horizontal_movement_speed: 0.3,
     jump_speed: 6,
 
     // player can't die. can be either true or false, no quotes
